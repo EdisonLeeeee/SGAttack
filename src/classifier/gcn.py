@@ -3,10 +3,11 @@ import tensorflow as tf
 from distutils.version import LooseVersion
 if LooseVersion(tf.__version__) > LooseVersion("1.14"):
     import tensorflow.compat.v1 as tf
-    
+if LooseVersion(tf.__version__) > LooseVersion("2.0"):
+    tf.disable_v2_behavior()
 import numpy as np
 import scipy.sparse as sp
-from tensorflow.contrib import slim
+from tensorflow.keras.initializers import glorot_uniform
 from sklearn.metrics import f1_score
 
 import utils
@@ -38,7 +39,7 @@ class GCN:
                 tf.set_random_seed(seed)
 
             with tf.variable_scope(name) as scope:
-                w_init = slim.xavier_initializer
+                w_init = glorot_uniform
                 self.name = name
 
                 self.dropout = params_dict. get('dropout', 0.)
@@ -68,8 +69,8 @@ class GCN:
                                       lambda: self.X_dropout,
                                       lambda: self.X_sparse) if self.dropout > 0. else self.X_sparse
 
-                self.W1 = slim.variable('W1', [self.D, hidden], tf.float32, initializer=w_init())
-                self.b1 = slim.variable('b1', dtype=tf.float32, initializer=tf.zeros(hidden))
+                self.W1 = tf.get_variable('W1', [self.D, hidden], tf.float32, initializer=w_init())
+                self.b1 = tf.get_variable('b1', dtype=tf.float32, initializer=tf.zeros(hidden))
 
                 self.h1 = spdot(self.adj, spdot(self.X_comp, self.W1))
 
@@ -82,8 +83,8 @@ class GCN:
                                        lambda: self.h1_dropout,
                                        lambda: self.h1) if self.dropout > 0. else self.h1
 
-                self.W2 = slim.variable('W2', [hidden, num_classes], tf.float32, initializer=w_init())
-                self.b2 = slim.variable('b2', dtype=tf.float32, initializer=tf.zeros(num_classes))
+                self.W2 = tf.get_variable('W2', [hidden, num_classes], tf.float32, initializer=w_init())
+                self.b2 = tf.get_variable('b2', dtype=tf.float32, initializer=tf.zeros(num_classes))
 
                 self.logits = spdot(self.adj, dot(self.h1_comp, self.W2))
                 if with_relu:

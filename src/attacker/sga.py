@@ -65,7 +65,7 @@ class SGA:
         non_edge = np.vstack([np.stack([np.tile(infl, length), nodes_with_wrong_label], axis=1) for infl in influence_nodes])
 
         if len(influence_nodes) > 1:
-            mask = self.adj[non_edge[0], selfnon_edge[1]].A1 == 0
+            mask = self.adj[non_edge[0], non_edge[1]].A1 == 0
             non_edge = non_edge[mask]
 
         nodes_all = np.union1d(self.nodes, nodes_with_wrong_label)
