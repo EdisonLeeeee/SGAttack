@@ -5,8 +5,11 @@ The Tensorflow 2.x Implementation could be found in [GraphGallery](https://githu
 
 ![SGA](./imgs/SGA.png)
 
+# Update
++ 2021/3/20: add tensorflow 2.x support
+
 # Requirements
-+ TensorFlow 1.15 (it should work in `1.14`, `1.13`...)
++ TensorFlow 1.15 (it should work in `1.14`, `1.13`... and `2.x`)
 + Numpy
 + Scipy
 + tqdm
@@ -46,16 +49,11 @@ If you make use of this code or the SGA algorithm in your work, please cite the 
 
 ```bibtex
 @article{li2020adversarial,
-  author    = {Jintang Li and
-               Tao Xie and
-               Liang Chen and
-               Fenfang Xie and
-               Xiangnan He and
-               Zibin Zheng},
-  title     = {Adversarial Attack on Large Scale Graph},
-  journal   = {CoRR},
-  volume    = {abs/2009.03488},
-  year      = {2020}
+  title={Adversarial attack on large scale graph},
+  author={Li, Jintang and Xie, Tao and Chen, Liang and Xie, Fenfang and He, Xiangnan and Zheng, Zibin},
+  journal={arXiv preprint arXiv:2009.03488},
+  year={2020}
+}  = {2020}
 }
 ```
 
