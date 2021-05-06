@@ -1,5 +1,5 @@
 # SGA
-Official implementation of Simlified Gradient Attack (SGA) in [Adversarial attack on large scale graph](https://arxiv.org/abs/2009.03488).
+Official implementation of Simlified Gradient Attack (SGA) in TKDE2021: [Adversarial attack on large scale graph](https://arxiv.org/abs/2009.03488).
 
 The Tensorflow 2.x Implementation could be found in [GraphGallery](https://github.com/EdisonLeeeee/GraphGallery).
 
