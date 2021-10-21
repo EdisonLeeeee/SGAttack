@@ -1,9 +1,13 @@
 # SGA
-Official implementation of Simlified Gradient Attack (SGA) in TKDE2021: [Adversarial attack on large scale graph](https://arxiv.org/abs/2009.03488).
+Official implementation of Simlified Gradient Attack (SGA) in TKDE 2021: [Adversarial attack on large scale graph](https://arxiv.org/abs/2009.03488).
 
-The Tensorflow 2.x Implementation could be found in [GraphGallery](https://github.com/EdisonLeeeee/GraphGallery).
 
 ![SGA](./imgs/SGA.png)
+
+# Implementations
++ The Tensorflow 2.x Implementation can be found at [GraphGallery](https://github.com/EdisonLeeeee/GraphGallery).
++ The PyTorch implementation can be found at [DeepRobust](https://github.com/DSE-MSU/DeepRobust/blob/master/examples/graph/test_sga.py).
+
 
 # Update
 + 2021/3/20: add tensorflow 2.x support
@@ -24,7 +28,6 @@ reddit could be found in http://snap.stanford.edu/graphsage/
 
 + cora
 + citeseer
-
 + pubmed  
 + reddit
 
@@ -48,12 +51,12 @@ See `src/demp.ipynb` for a simple example to run our codes.
 If you make use of this code or the SGA algorithm in your work, please cite the following paper:
 
 ```bibtex
-@article{li2020adversarial,
+@article{li2021adversarial,
   title={Adversarial attack on large scale graph},
-  author={Li, Jintang and Xie, Tao and Chen, Liang and Xie, Fenfang and He, Xiangnan and Zheng, Zibin},
-  journal={arXiv preprint arXiv:2009.03488},
-  year={2020}
-}  = {2020}
+  author={Li, Jintang and Xie, Tao and Liang, Chen and Xie, Fenfang and He, Xiangnan and Zheng, Zibin},
+  journal={IEEE Transactions on Knowledge and Data Engineering},
+  year={2021},
+  publisher={IEEE}
 }
 ```
 
