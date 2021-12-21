@@ -5,8 +5,7 @@ Official implementation of Simlified Gradient Attack (SGA) in TKDE 2021: [Advers
 ![SGA](./imgs/SGA.png)
 
 # Implementations
-+ The Tensorflow 2.x Implementation can be found at [GraphGallery](https://github.com/EdisonLeeeee/GraphGallery).
-+ The PyTorch implementation can be found at [DeepRobust](https://github.com/DSE-MSU/DeepRobust/blob/master/examples/graph/test_sga.py).
++ The PyTorch implementation can be found at [DeepRobust](https://github.com/DSE-MSU/DeepRobust/blob/master/examples/graph/test_sga.py) or [GraphWar](https://github.com/EdisonLeeeee/GraphWar).
 
 
 # Update
@@ -22,9 +21,9 @@ Official implementation of Simlified Gradient Attack (SGA) in TKDE 2021: [Advers
 
 we only consider the largest connected component (`LCC`) of the graph for each dataset, e.g., `data/cora_lcc`.
 
-Cora, Citeseer and Pubmed could be found in in https://github.com/danielzuegner/gnn-meta-attack,
+Cora, Citeseer and Pubmed could be found at https://github.com/danielzuegner/gnn-meta-attack,
 
-reddit could be found in http://snap.stanford.edu/graphsage/
+reddit could be found at http://snap.stanford.edu/graphsage/
 
 + cora
 + citeseer
