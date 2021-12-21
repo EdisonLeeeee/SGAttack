@@ -19,7 +19,7 @@ Official implementation of Simlified Gradient Attack (SGA) in TKDE 2021: [Advers
 
 # Datasets
 
-we only consider the largest connected component (`LCC`) of the graph for each dataset, e.g., `data/cora_lcc`.
+we consider the largest connected component (LCC) of the graph for each dataset, e.g., `data/cora_lcc`.
 
 Cora, Citeseer and Pubmed could be found at https://github.com/danielzuegner/gnn-meta-attack,
 
@@ -38,7 +38,7 @@ How to attack a graph neural networks?
 + Generate perturbation (edge flips)
 + Attack target models with adversarial examples (SGC, GCN ...)
 
-See `src/demp.ipynb` for a simple example to run our codes.
+See `src/demo.ipynb` for a simple example to run our codes.
 
 # Reproduce results in paper
 
